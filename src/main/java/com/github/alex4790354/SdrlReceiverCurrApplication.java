@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SdrlReceiverCurrencyApplication {
+public class SdrlReceiverCurrApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SdrlReceiverCurrencyApplication.class, args);
+		SpringApplication.run(SdrlReceiverCurrApplication.class, args);
 	}
 
 }

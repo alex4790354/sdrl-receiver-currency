@@ -1,0 +1,68 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: SpxReceiverCbr
+
+  rabbitmq:
+    nack:
+      timeout: 1000
+    host: ${RABBIT_HOST:localhost}
+    port: ${RABBIT_PORT:5672}
+    username: ${RABBIT_USERNAME:guest}
+    password: ${RABBIT_PASSWORD:guest}
+    listener:
+      simple:
+        retry:
+          enabled: ${RABBIT_LISTENER_RETRY_ENABLED:true}
+          initial-interval: ${RABBIT_LISTENER_RETRY_INITIAL_INTERVAL:3s}
+          max-attempts: ${RABBIT_LISTENER_RETRY_MAX_ATTEMPTS:2}
+          max-interval: ${RABBIT_LISTENER_RETRY_MAX_INTERVAL:10s}
+          multiplier: ${RABBIT_LISTENER_RETRY_MULTIPLIER:2}
+        acknowledge-mode: manual
+
+    cbr:
+      enable: ${RABBIT_RECEIVER_CBR_ENABLE:true}
+      name: ${RABBIT_RECEIVER_CBR_NAME:spx-receiver-cbr-currency}
+      queue: ${RABBIT_RECEIVER_CBR_QUEUE:spx-receiver-cbr-currency-queue}
+      exchange: ${RABBIT_RECEIVER_CBR_EXCHANGE:spx-feed-cbr-currency-exchange}
+    rates:
+      enable: ${RABBIT_RECEIVER_RATES_ENABLE:true}
+      name: ${RABBIT_RECEIVER_RATES_NAME:spx-receiver-cbr-currency-rate}
+      queue: ${RABBIT_RECEIVER_RATES_QUEUE:spx-receiver-cbr-currency-rate-queue}
+      exchange: ${RABBIT_RECEIVER_RATES_EXCHANGE:spx-feed-cbr-currency-rate-exchange}
+    metal:
+      enable: ${RABBIT_RECEIVER_METAL_ENABLE:true}
+      name: ${RABBIT_RECEIVER_METAL_NAME:spx-receiver-cbr-metal-rate}
+      queue: ${RABBIT_RECEIVER_METAL_QUEUE:spx-receiver-cbr-metal-rate-queue}
+      exchange: ${RABBIT_RECEIVER_METAL_EXCHANGE:spx-feed-cbr-metal-rate-exchange}
+
+    invalid-message:
+      queue: ${RABBIT_INVALID_MESSAGE_QUEUE:spx-receiver-cbr-invalid-message-queue}
+      exchange: ${RABBIT_INVALID_MESSAGE_EXCHANGE:spx-receiver-cbr-invalid-message-exchange}
+      invalid-message-key: ${RABBIT_INVALID_MESSAGE_KEY:spx-receiver-cbr-invalid-message-key}
+
+    dead-letter:
+      queue: ${RABBIT_DEAD_LETTER_QUEUE:deadLetterQueue}
+      exchange: ${RABBIT_DEAD_LETTER_EXCHANGE:deadLetterExchange}
+      dead-letter-key: ${RABBIT_DEAD_LETTER_KEY:deadLetterContributorKey}
+      exchange-argument: ${RABBIT_ARGUMENT_EXCHANGE:x-dead-letter-exchange}
+      routing-key-argument: ${RABBIT_ARGUMENT_ROUTING_KEY:x-dead-letter-routing-key}
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    contexts: base
+    liquibase-schema: cbr
+
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${HDB_HOST:localhost}:${HDB_PORT:5430}/${HDB_DATABASE:cbr}
+    username: ${HDB_USER:usr}
+    password: ${HDB_PASSWORD:pwd}
+    hikari:
+      maximumPoolSize: ${DB_MAX_CONNECTIONS:3}
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
