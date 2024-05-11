@@ -1,0 +1,308 @@
+[
+  {
+    "id": "R01010",
+    "num_code": 36,
+    "char_code": "AUD",
+    "nominal": 1,
+    "name": "Австралийский доллар",
+    "value": 43.3260,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01020A",
+    "num_code": 944,
+    "char_code": "AZN",
+    "nominal": 1,
+    "name": "Азербайджанский манат",
+    "value": 38.0046,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01035",
+    "num_code": 826,
+    "char_code": "GBP",
+    "nominal": 1,
+    "name": "Фунт стерлингов Соединенного королевства",
+    "value": 78.9507,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01060",
+    "num_code": 51,
+    "char_code": "AMD",
+    "nominal": 100,
+    "name": "Армянских драмов",
+    "value": 16.3792,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01090B",
+    "num_code": 933,
+    "char_code": "BYN",
+    "nominal": 1,
+    "name": "Белорусский рубль",
+    "value": 25.2937,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01100",
+    "num_code": 975,
+    "char_code": "BGN",
+    "nominal": 1,
+    "name": "Болгарский лев",
+    "value": 35.0843,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01115",
+    "num_code": 986,
+    "char_code": "BRL",
+    "nominal": 1,
+    "name": "Бразильский реал",
+    "value": 12.1489,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01135",
+    "num_code": 348,
+    "char_code": "HUF",
+    "nominal": 100,
+    "name": "Венгерских форинтов",
+    "value": 16.8834,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01200",
+    "num_code": 344,
+    "char_code": "HKD",
+    "nominal": 10,
+    "name": "Гонконгских долларов",
+    "value": 83.1717,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01215",
+    "num_code": 208,
+    "char_code": "DKK",
+    "nominal": 10,
+    "name": "Датских крон",
+    "value": 92.2468,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01235",
+    "num_code": 840,
+    "char_code": "USD",
+    "nominal": 1,
+    "name": "Доллар США",
+    "value": 64.6078,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01239",
+    "num_code": 978,
+    "char_code": "EUR",
+    "nominal": 1,
+    "name": "Евро",
+    "value": 68.7798,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01270",
+    "num_code": 356,
+    "char_code": "INR",
+    "nominal": 100,
+    "name": "Индийских рупий",
+    "value": 78.5895,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01335",
+    "num_code": 398,
+    "char_code": "KZT",
+    "nominal": 100,
+    "name": "Казахстанских тенге",
+    "value": 13.7886,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01350",
+    "num_code": 124,
+    "char_code": "CAD",
+    "nominal": 1,
+    "name": "Канадский доллар",
+    "value": 47.3664,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01370",
+    "num_code": 417,
+    "char_code": "KGS",
+    "nominal": 100,
+    "name": "Киргизских сомов",
+    "value": 76.0539,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01375",
+    "num_code": 156,
+    "char_code": "CNY",
+    "nominal": 10,
+    "name": "Китайских юаней",
+    "value": 92.4382,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01500",
+    "num_code": 498,
+    "char_code": "MDL",
+    "nominal": 10,
+    "name": "Молдавских леев",
+    "value": 33.3461,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01535",
+    "num_code": 578,
+    "char_code": "NOK",
+    "nominal": 10,
+    "name": "Норвежских крон",
+    "value": 65.4893,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01565",
+    "num_code": 985,
+    "char_code": "PLN",
+    "nominal": 1,
+    "name": "Польский злотый",
+    "value": 14.6473,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01585F",
+    "num_code": 946,
+    "char_code": "RON",
+    "nominal": 1,
+    "name": "Румынский лей",
+    "value": 13.9527,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01589",
+    "num_code": 960,
+    "char_code": "XDR",
+    "nominal": 1,
+    "name": "СДР (специальные права заимствования)",
+    "value": 85.9807,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01625",
+    "num_code": 702,
+    "char_code": "SGD",
+    "nominal": 1,
+    "name": "Сингапурский доллар",
+    "value": 47.6318,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01670",
+    "num_code": 972,
+    "char_code": "TJS",
+    "nominal": 10,
+    "name": "Таджикских сомони",
+    "value": 63.3149,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01700J",
+    "num_code": 949,
+    "char_code": "TRY",
+    "nominal": 10,
+    "name": "Турецких лир",
+    "value": 34.6567,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01710A",
+    "num_code": 934,
+    "char_code": "TMT",
+    "nominal": 1,
+    "name": "Новый туркменский манат",
+    "value": 18.4594,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01717",
+    "num_code": 860,
+    "char_code": "UZS",
+    "nominal": 10000,
+    "name": "Узбекских сумов",
+    "value": 57.5255,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01720",
+    "num_code": 980,
+    "char_code": "UAH",
+    "nominal": 10,
+    "name": "Украинских гривен",
+    "value": 17.4939,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01760",
+    "num_code": 203,
+    "char_code": "CZK",
+    "nominal": 10,
+    "name": "Чешских крон",
+    "value": 28.2710,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01770",
+    "num_code": 752,
+    "char_code": "SEK",
+    "nominal": 10,
+    "name": "Шведских крон",
+    "value": 62.4375,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01775",
+    "num_code": 756,
+    "char_code": "CHF",
+    "nominal": 1,
+    "name": "Швейцарский франк",
+    "value": 69.4857,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01810",
+    "num_code": 710,
+    "char_code": "ZAR",
+    "nominal": 10,
+    "name": "Южноафриканских рэндов",
+    "value": 37.2396,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01815",
+    "num_code": 410,
+    "char_code": "KRW",
+    "nominal": 1000,
+    "name": "Вон Республики Корея",
+    "value": 49.4927,
+    "date": "2022-12-17"
+  },
+  {
+    "id": "R01820",
+    "num_code": 392,
+    "char_code": "JPY",
+    "nominal": 100,
+    "name": "Японских иен",
+    "value": 46.9431,
+    "date": "2022-12-17"
+  }
+]

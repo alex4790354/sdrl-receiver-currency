@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset alexander.v:01_001
+--changeset alex4790354:01_001
 
 CREATE TABLE IF NOT EXISTS cbr.currency
 (
@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS cbr.currency
     name_rus            VARCHAR(250) NOT NULL,
     name_eng            VARCHAR(250) NOT NULL,
     nominal             BIGINT NOT NULL,
+    parent_code         VARCHAR(10),
     creation_time       TIMESTAMP WITH TIME ZONE DEFAULT now(),
     update_time         TIMESTAMP WITH TIME ZONE DEFAULT now(),
     instr_name          VARCHAR(250),

@@ -1,8 +1,8 @@
 spring:
+  application:
+    name: SdrlReceiverCbr
   main:
     allow-bean-definition-overriding: true
-  application:
-    name: SpxReceiverCbr
 
   rabbitmq:
     nack:

@@ -1,15 +1,8 @@
 version: '3'
 services:
-  rabbitmq:
-    image: rabbitmq:management
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-#   user/pwd: guest/guest
-
   postgres:
     image: "postgres:13"
-    container_name: 'java-postgres'
+    container_name: 'java-postgres-receiver'
     ports:
       - "5430:5432"
     environment:
