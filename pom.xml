@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>com.github.alex4790354</groupId>
-    <artifactId>sdrl-receiver-currency</artifactId>
+    <artifactId>sdrl-receiver-cbr</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>sdrl-receiver-currency</name>
+    <name>sdrl-receiver-cbr</name>
     <description>SDRL Demo project</description>
 
     <properties>
