@@ -59,8 +59,8 @@ spring:
   datasource:
     url: jdbc:hsqldb:file:src/test/resources/testdb/sdrldb;schema=CBR
     driver-class-name: org.hsqldb.jdbc.JDBCDriver
-    username: sa
-    password:
+    username: usr
+    password: pwd
     #url: jdbc:hsqldb:mem:testdb
   jpa:
     hibernate:

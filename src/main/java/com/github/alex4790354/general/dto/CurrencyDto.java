@@ -2,10 +2,12 @@ package com.github.alex4790354.general.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
 @Data
+@NoArgsConstructor
 public class CurrencyDto {
 
     @JsonProperty("id")

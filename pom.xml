@@ -74,6 +74,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
         </dependency>
+        <!--<dependency>
+            &lt;!&ndash;TODO: 2.13.3 =>> version&ndash;&gt;
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.3</version>
+            <scope>test</scope>
+        </dependency>-->
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
@@ -83,7 +90,7 @@
         <dependency>
             <groupId>org.dbunit</groupId>
             <artifactId>dbunit</artifactId>
-            <version>2.7.0</version>
+            <version>2.7.3</version>
         </dependency>
 
     </dependencies>

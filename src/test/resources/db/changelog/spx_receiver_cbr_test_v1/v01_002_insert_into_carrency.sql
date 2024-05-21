@@ -1,7 +1,7 @@
 --liquibase formatted sql
 --changeset alex4790354:01_002
 
-INSERT INTO currency(id, frequency, nominal, name_rus, name_eng, instr_name, instr_name_eng, parent_code)
+INSERT INTO CBR.currency(id, frequency, nominal, name_rus, name_eng, instr_name, instr_name_eng, parent_code)
 VALUES ('R01100'  , 'DAILY', '1'     , 'BGN/RUB  Официальный курс', 'BGN/RUB Official Rate', 'Bulgarian lev'          , 'Bulgarian lev'          , 'R01100'),
        ('R01115'  , 'DAILY', '1'     , 'BRL/RUB  Официальный курс', 'BRL/RUB Official Rate', 'Brazil Real'            , 'Brazil Real'            , 'R01115'),
        ('R01135'  , 'DAILY', '100'   , 'HUF/RUB  Официальный курс', 'HUF/RUB Official Rate', 'Hungarian Forint'       , 'Hungarian Forint'       , 'R01135'),
