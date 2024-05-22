@@ -36,6 +36,9 @@ class CbrLoadDataServiceTest {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private CbrLoadDataService cbrLoadDataService;
+
     private IDatabaseTester databaseTester;
 
     @BeforeEach
@@ -63,9 +66,7 @@ class CbrLoadDataServiceTest {
         ObjectMapper objectMapper = new ObjectMapper();
         List<CurrencyDto> currencyList = objectMapper.readValue(jsonContent, new TypeReference<List<CurrencyDto>>() {});
 
-        assertThat(currencyList).isNotEmpty();
-        loadCurrency(currencyList);
-
+        cbrLoadDataService.loadCurrency(currencyList);
         count = jdbcTemplate.queryForObject("SELECT count(*) FROM cbr.currency", Integer.class);
         assertThat(count).isEqualTo(currencyList.size());
 
@@ -89,7 +90,7 @@ class CbrLoadDataServiceTest {
         List<CurrencyRateDto> currencyRateList = objectMapper.readValue(currencyRateJson, new TypeReference<List<CurrencyRateDto>>() {});
         assertThat(currencyRateList).isNotEmpty();
 
-        loadCurrencyRates(currencyRateList);
+        cbrLoadDataService.loadCurrencyRates(currencyRateList);
         int count = jdbcTemplate.queryForObject("SELECT count(*) FROM cbr.currency_rate", Integer.class);
         assertThat(count).isEqualTo(currencyRateList.size());
 
@@ -114,7 +115,7 @@ class CbrLoadDataServiceTest {
         List<MetalRateDto> metalRateList = objectMapper.readValue(metalRateJson, new TypeReference<>(){});
         assertThat(metalRateList).isNotEmpty();
 
-        loadMetalRates(metalRateList);
+        cbrLoadDataService.loadMetalRates(metalRateList);
         int count = jdbcTemplate.queryForObject("SELECT count(*) FROM cbr.metal_rate", Integer.class);
         assertThat(count).isEqualTo(metalRateList.size());
 
@@ -128,79 +129,5 @@ class CbrLoadDataServiceTest {
         ITable filteredActualTable = DefaultColumnFilter.excludedColumnsTable(actualTable, new String[]{"creation_time", "update_time"});
 
         Assertion.assertEquals(filteredExpectedTable, filteredActualTable);
-    }
-
-
-    // HSQLDB does not support option "ON CONFLICT (...)" and PostgreSQL not support Merge => we have to write separate script for HSQLDB
-    private void loadCurrency(List<CurrencyDto> currencyList) {
-        try {
-            for (CurrencyDto currency : currencyList) {
-                jdbcTemplate.update("""
-                                            MERGE INTO cbr.currency AS target
-                                                USING (VALUES (?, ?, ?, ?, ?, ?)) AS source (id, frequency, name_rus, name_eng, nominal, parent_code)
-                                                ON target.id = source.id
-                                                WHEN MATCHED THEN UPDATE SET
-                                                    target.frequency = source.frequency,
-                                                    target.name_rus = source.name_rus,
-                                                    target.name_eng = source.name_eng,
-                                                    target.nominal = source.nominal,
-                                                    target.parent_code = source.parent_code,
-                                                    target.update_time = NOW()
-                                                WHEN NOT MATCHED THEN INSERT (id, frequency, name_rus, name_eng, nominal, parent_code)
-                                                    VALUES (source.id, source.frequency, source.name_rus, source.name_eng, source.nominal, source.parent_code);
-                                        """,
-                                        currency.getId(), currency.getFrequency(), currency.getNameRus(), currency.getNameEng(), currency.getNominal(), currency.getParentCode()
-                                    );
-            }
-        } catch (Exception e) {
-            System.out.println("Error (loadCurrency). Message --> " + e.getMessage());
-        }
-    }
-
-
-    private void loadCurrencyRates(List<CurrencyRateDto> currencyRateList) {
-        try {
-            for (CurrencyRateDto rate : currencyRateList) {
-                jdbcTemplate.update("""
-                MERGE INTO cbr.currency_rate AS target
-                USING (VALUES (?, TO_DATE(?, 'YYYY-MM-DD'), ?, ?, 'RUB', ?)) AS source (id, effective_date, nominal, first_crncy, second_crncy, value)
-                ON target.id = source.id AND target.effective_date = source.effective_date
-                WHEN MATCHED THEN UPDATE SET
-                    target.nominal = source.nominal,
-                    target.first_crncy = source.first_crncy,
-                    target.second_crncy = source.second_crncy,
-                    target.value = source.value,
-                    target.update_time = NOW()
-                WHEN NOT MATCHED THEN INSERT (id, effective_date, nominal, first_crncy, second_crncy, value, creation_time, update_time)
-                    VALUES (source.id, source.effective_date, source.nominal, source.first_crncy, source.second_crncy, source.value, NOW(), NOW());
-            """,
-                        rate.getId(), rate.getDateAsString(), rate.getNominal(), rate.getCharCode(), rate.getValue());
-            }
-        } catch (Exception e) {
-            System.out.println("Error (loadCurrencyRates). Message --> " + e.getMessage());
-        }
-    }
-
-
-    private void loadMetalRates(List<MetalRateDto> metalRateList) {
-        try {
-            for (MetalRateDto rate : metalRateList) {
-                jdbcTemplate.update("""
-                MERGE INTO cbr.metal_rate AS target
-                USING (VALUES (?, TO_DATE(?, 'YYYY-MM-DD'), ?, ?, ?)) AS source (code, effective_date, buy, sell, value)
-                ON target.code = source.code AND target.effective_date = source.effective_date
-                WHEN MATCHED THEN UPDATE SET
-                    target.buy = source.buy,
-                    target.sell = source.sell,
-                    target.value = source.value,
-                    target.update_time = NOW()
-                WHEN NOT MATCHED THEN INSERT (code, effective_date, buy, sell, value, creation_time, update_time)
-                    VALUES (source.code, source.effective_date, source.buy, source.sell, source.value, NOW(), NOW());
-            """,
-                        rate.getCode(), rate.getDateAsString(), rate.getBuy(), rate.getSell(), rate.getValue());
-            }
-        } catch (Exception e) {
-            System.out.println("Error (loadCurrencyRates). Message --> " + e.getMessage());
-        }
     }
 }
