@@ -34,12 +34,12 @@
 			"response": []
 		},
 		{
-			"name": "CBR_2 - Currency Rates - 2022-12-17",
+			"name": "CBR_2 - Currency Rates - 2024-05-14",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.cbr.ru/scripts/XML_daily.asp?date_req=27/04/2023",
+					"raw": "https://www.cbr.ru/scripts/XML_daily.asp?date_req=14/05/2024",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -53,7 +53,7 @@
 					"query": [
 						{
 							"key": "date_req",
-							"value": "27/04/2023"
+							"value": "14/05/2024"
 						}
 					]
 				}
@@ -101,7 +101,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://www.cbr.ru/scripts/xml_metall.asp?date_req1=17/01/2023&date_req2=17/01/2023",
+					"raw": "http://www.cbr.ru/scripts/xml_metall.asp?date_req1=14/05/2024&date_req2=15/05/2024",
 					"protocol": "http",
 					"host": [
 						"www",
@@ -115,11 +115,11 @@
 					"query": [
 						{
 							"key": "date_req1",
-							"value": "17/01/2023"
+							"value": "14/05/2024"
 						},
 						{
 							"key": "date_req2",
-							"value": "17/01/2023"
+							"value": "15/05/2024"
 						}
 					]
 				}
@@ -189,7 +189,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8084/scripts/XML_daily.asp?date_req=17/12/2022",
+					"raw": "http://localhost:8084/scripts/XML_daily.asp?date_req=14/05/2024",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -202,7 +202,7 @@
 					"query": [
 						{
 							"key": "date_req",
-							"value": "17/12/2022"
+							"value": "14/05/2024"
 						}
 					]
 				}
@@ -236,16 +236,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8085/scripts/currency-rate/initial-load",
+					"raw": "http://localhost:8084/scripts/metalRate",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8085",
+					"port": "8084",
 					"path": [
 						"scripts",
-						"currency-rate",
-						"initial-load"
+						"metalRate"
 					]
 				}
 			},
@@ -257,16 +256,21 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8085/scripts/currency-rate/initial-load",
+					"raw": "http://localhost:8084/scripts/metalByDate?date_req=14/05/2024",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8085",
+					"port": "8084",
 					"path": [
 						"scripts",
-						"currency-rate",
-						"initial-load"
+						"metalByDate"
+					],
+					"query": [
+						{
+							"key": "date_req",
+							"value": "14/05/2024"
+						}
 					]
 				}
 			},

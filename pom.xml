@@ -26,6 +26,8 @@
         <maven-pmd-plugin.version>3.22.0</maven-pmd-plugin.version>
         <pmd-java.version>7.1.0</pmd-java.version>
         <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
+        <hsqldb.version>2.7.2</hsqldb.version>
+        <dbunit.version>2.7.3</dbunit.version>
     </properties>
 
     <dependencies>
@@ -47,7 +49,6 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>${mybatis-spring-boot-starter.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -60,7 +61,6 @@
         </dependency>
 
         <!--Testing:-->
-        <!--java.sql.SQLSyntaxErrorException: user lacks privilege or object not found: CURRENCY-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -74,25 +74,17 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
         </dependency>
-        <!--<dependency>
-            &lt;!&ndash;TODO: 2.13.3 =>> version&ndash;&gt;
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.3</version>
-            <scope>test</scope>
-        </dependency>-->
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
-            <version>2.6.1</version>
+            <version>${hsqldb.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.dbunit</groupId>
             <artifactId>dbunit</artifactId>
-            <version>2.7.3</version>
+            <version>${dbunit.version}</version>
         </dependency>
-
     </dependencies>
 
     <build>

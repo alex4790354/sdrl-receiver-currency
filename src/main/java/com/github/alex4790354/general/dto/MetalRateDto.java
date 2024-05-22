@@ -3,6 +3,7 @@ package com.github.alex4790354.general.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -10,6 +11,7 @@ import java.math.BigDecimal;
 
 @Getter
 @ToString
+@NoArgsConstructor
 public class MetalRateDto {
 
     @Setter
