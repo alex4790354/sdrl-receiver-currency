@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: "postgres:16"
+    container_name: 'java-postgres-receiver'
+    ports:
+      - "5430:5432"
+    environment:
+      - 'POSTGRES_DB=cbr'
+      - 'POSTGRES_USER=usr'
+      - 'POSTGRES_PASSWORD=pwd'
+    volumes:
+      - ./src/main/resources/db/init.sql:/docker-entrypoint-initdb.d/init.sql

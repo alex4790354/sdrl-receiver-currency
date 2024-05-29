@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <metal_rate code="1" effective_date="2024-05-14"  buy="6989.4000"  sell="6989.4000"  value="6989.4000"  creation_time="2024-05-22 18:13:47.825000 -04:00"  update_time="2024-05-22 18:13:47.825000 -04:00"/>
+    <metal_rate code="2" effective_date="2024-05-14"  buy="84.3800"    sell="84.3800"    value="84.3800"    creation_time="2024-05-22 18:13:47.856000 -04:00"  update_time="2024-05-22 18:13:47.856000 -04:00"/>
+    <metal_rate code="3" effective_date="2024-05-14"  buy="2916.6100"  sell="2916.6100"  value="2916.6100"  creation_time="2024-05-22 18:13:47.859000 -04:00"  update_time="2024-05-22 18:13:47.859000 -04:00"/>
+    <metal_rate code="4" effective_date="2024-05-14"  buy="2928.3900"  sell="2928.3900"  value="2928.3900"  creation_time="2024-05-22 18:13:47.860000 -04:00"  update_time="2024-05-22 18:13:47.860000 -04:00"/>
+</dataset>
+
