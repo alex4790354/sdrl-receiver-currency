@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - includeAll:
+      path: spx_receiver_cbr_test_v1/
+      relativeToChangelogFile: true
