@@ -1,0 +1,389 @@
+[
+  {
+    "id": "R01010",
+    "num_code": 36,
+    "char_code": "AUD",
+    "nominal": 1,
+    "name": "Австралийский доллар",
+    "value": 60.4411,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01020A",
+    "num_code": 944,
+    "char_code": "AZN",
+    "nominal": 1,
+    "name": "Азербайджанский манат",
+    "value": 53.9018,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01035",
+    "num_code": 826,
+    "char_code": "GBP",
+    "nominal": 1,
+    "name": "Фунт стерлингов Соединенного королевства",
+    "value": 114.6146,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01060",
+    "num_code": 51,
+    "char_code": "AMD",
+    "nominal": 100,
+    "name": "Армянских драмов",
+    "value": 23.6387,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01090B",
+    "num_code": 933,
+    "char_code": "BYN",
+    "nominal": 1,
+    "name": "Белорусский рубль",
+    "value": 28.3413,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01100",
+    "num_code": 975,
+    "char_code": "BGN",
+    "nominal": 1,
+    "name": "Болгарский лев",
+    "value": 50.5010,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01115",
+    "num_code": 986,
+    "char_code": "BRL",
+    "nominal": 1,
+    "name": "Бразильский реал",
+    "value": 17.8063,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01135",
+    "num_code": 348,
+    "char_code": "HUF",
+    "nominal": 100,
+    "name": "Венгерских форинтов",
+    "value": 25.5117,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01150",
+    "num_code": 704,
+    "char_code": "VND",
+    "nominal": 10000,
+    "name": "Вьетнамских донгов",
+    "value": 37.7619,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01200",
+    "num_code": 344,
+    "char_code": "HKD",
+    "nominal": 1,
+    "name": "Гонконгский доллар",
+    "value": 11.7508,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01210",
+    "num_code": 981,
+    "char_code": "GEL",
+    "nominal": 1,
+    "name": "Грузинский лари",
+    "value": 34.2489,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01215",
+    "num_code": 208,
+    "char_code": "DKK",
+    "nominal": 1,
+    "name": "Датская крона",
+    "value": 13.1960,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01230",
+    "num_code": 784,
+    "char_code": "AED",
+    "nominal": 1,
+    "name": "Дирхам ОАЭ",
+    "value": 24.9511,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01235",
+    "num_code": 840,
+    "char_code": "USD",
+    "nominal": 1,
+    "name": "Доллар США",
+    "value": 91.6330,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01239",
+    "num_code": 978,
+    "char_code": "EUR",
+    "nominal": 1,
+    "name": "Евро",
+    "value": 98.8486,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01240",
+    "num_code": 818,
+    "char_code": "EGP",
+    "nominal": 10,
+    "name": "Египетских фунтов",
+    "value": 19.4733,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01270",
+    "num_code": 356,
+    "char_code": "INR",
+    "nominal": 10,
+    "name": "Индийских рупий",
+    "value": 10.9709,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01280",
+    "num_code": 360,
+    "char_code": "IDR",
+    "nominal": 10000,
+    "name": "Индонезийских рупий",
+    "value": 56.9822,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01335",
+    "num_code": 398,
+    "char_code": "KZT",
+    "nominal": 100,
+    "name": "Казахстанских тенге",
+    "value": 20.8541,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01350",
+    "num_code": 124,
+    "char_code": "CAD",
+    "nominal": 1,
+    "name": "Канадский доллар",
+    "value": 67.0567,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01355",
+    "num_code": 634,
+    "char_code": "QAR",
+    "nominal": 1,
+    "name": "Катарский риал",
+    "value": 25.1739,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01370",
+    "num_code": 417,
+    "char_code": "KGS",
+    "nominal": 10,
+    "name": "Киргизских сомов",
+    "value": 10.3729,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01375",
+    "num_code": 156,
+    "char_code": "CNY",
+    "nominal": 1,
+    "name": "Китайский юань",
+    "value": 12.6230,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01500",
+    "num_code": 498,
+    "char_code": "MDL",
+    "nominal": 10,
+    "name": "Молдавских леев",
+    "value": 51.5142,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01530",
+    "num_code": 554,
+    "char_code": "NZD",
+    "nominal": 1,
+    "name": "Новозеландский доллар",
+    "value": 55.0714,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01535",
+    "num_code": 578,
+    "char_code": "NOK",
+    "nominal": 10,
+    "name": "Норвежских крон",
+    "value": 84.6111,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01565",
+    "num_code": 985,
+    "char_code": "PLN",
+    "nominal": 1,
+    "name": "Польский злотый",
+    "value": 22.9927,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01585F",
+    "num_code": 946,
+    "char_code": "RON",
+    "nominal": 1,
+    "name": "Румынский лей",
+    "value": 19.8529,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01589",
+    "num_code": 960,
+    "char_code": "XDR",
+    "nominal": 1,
+    "name": "СДР (специальные права заимствования)",
+    "value": 121.0298,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01625",
+    "num_code": 702,
+    "char_code": "SGD",
+    "nominal": 1,
+    "name": "Сингапурский доллар",
+    "value": 67.6658,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01670",
+    "num_code": 972,
+    "char_code": "TJS",
+    "nominal": 10,
+    "name": "Таджикских сомони",
+    "value": 84.0138,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01675",
+    "num_code": 764,
+    "char_code": "THB",
+    "nominal": 10,
+    "name": "Таиландских батов",
+    "value": 24.9023,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01700J",
+    "num_code": 949,
+    "char_code": "TRY",
+    "nominal": 10,
+    "name": "Турецких лир",
+    "value": 28.4731,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01710A",
+    "num_code": 934,
+    "char_code": "TMT",
+    "nominal": 1,
+    "name": "Новый туркменский манат",
+    "value": 26.1809,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01717",
+    "num_code": 860,
+    "char_code": "UZS",
+    "nominal": 10000,
+    "name": "Узбекских сумов",
+    "value": 72.0494,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01720",
+    "num_code": 980,
+    "char_code": "UAH",
+    "nominal": 10,
+    "name": "Украинских гривен",
+    "value": 23.0694,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01760",
+    "num_code": 203,
+    "char_code": "CZK",
+    "nominal": 10,
+    "name": "Чешских крон",
+    "value": 39.9307,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01770",
+    "num_code": 752,
+    "char_code": "SEK",
+    "nominal": 10,
+    "name": "Шведских крон",
+    "value": 84.5174,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01775",
+    "num_code": 756,
+    "char_code": "CHF",
+    "nominal": 1,
+    "name": "Швейцарский франк",
+    "value": 101.0732,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01805F",
+    "num_code": 941,
+    "char_code": "RSD",
+    "nominal": 100,
+    "name": "Сербских динаров",
+    "value": 84.2866,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01810",
+    "num_code": 710,
+    "char_code": "ZAR",
+    "nominal": 10,
+    "name": "Южноафриканских рэндов",
+    "value": 49.8049,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01815",
+    "num_code": 410,
+    "char_code": "KRW",
+    "nominal": 1000,
+    "name": "Вон Республики Корея",
+    "value": 66.9734,
+    "date": "2024-05-14"
+  },
+  {
+    "id": "R01820",
+    "num_code": 392,
+    "char_code": "JPY",
+    "nominal": 100,
+    "name": "Японских иен",
+    "value": 58.7692,
+    "date": "2024-05-14"
+  }
+]
